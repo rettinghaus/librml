@@ -1,13 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.9.0"
-gem "jekyll-theme-slate"
-
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-  gem "github-pages"
-
-end
+gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", "~> 1.2"
