@@ -1,6 +1,9 @@
-body {
-    color: #000000;
-}
+@use 'variables' with (
+  $header-bg-color: #cc0000,
+  $header-bg-color-secondary: #cc0000,
+
+  $body-text-color: #000000,
+);
 
 .btn.active {
     background-color: rgba(255, 255, 255, 0.5);
@@ -57,8 +60,6 @@ div.aside {
 
 .page-header {
     padding: 1rem 6rem;
-    background-image: none;
-    background-color: #cc0000;
 }
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
