@@ -5,6 +5,17 @@
 Die Einschränkungen (`constraints`) mit ihren zugehörigen Eigenschaften (`attributes`) sind nicht auf alle Nutzungsarten (`actions`) anwendbar.
 Folgende Tabelle verschafft einen Überblick, welche Einschränkungen mit welchen Nutzungsarten kombinierbar sind.
 
+### Einschränkungen verfügbar für alle Nutzungsarten: 
+
+date
+: fromdate
+: todate
+
+location
+: inside
+: outside
+: subnet
+
 | Attribut | Constraint | Action |
 | :--------- | :--------- | :--------- |
 | fromdate | date | alle actions |
