@@ -8,8 +8,8 @@ Die Einschränkungen gelten ausdrücklich nur für die `action`, der sie zugewie
 Einschränkungen können durch [Attributes (Eigenschaften)](attributes.md) weiter spezifiziert werden.
 
 ```xml
-  <action permission="true" type="ACTION-NAME">
-    <restriction ATTRIBUT-NAME="WERT" type="CONSTRAINT-NAME"/>
+  <action type="ACTION-NAME" permission="true">
+    <restriction type="CONSTRAINT-NAME" ATTRIBUT-NAME="WERT"/>
   </action>
 ```
 
@@ -47,8 +47,8 @@ In LibRML stehen folgende Einschränkungen zur Verfügung.
 ### Parts
 
 ```xml
-  <action permission="true" type="download">
-    <restriction parts="1" type="parts"/>
+  <action type="download" permission="true">
+    <restriction type="parts" parts="1" />
   </action>
 ```
 
@@ -65,8 +65,8 @@ In LibRML stehen folgende Einschränkungen zur Verfügung.
 ### Group
 
 ```xml
-  <action permission="true" type="print">
-    <restriction groups="registered employee" type="group"/>
+  <action type="print" permission="true">
+    <restriction type="group" groups="registered employee" />
   </action>
 ```
 
@@ -86,8 +86,8 @@ In LibRML stehen folgende Einschränkungen zur Verfügung.
 ### Age
 
 ```xml
-  <action permission="true" type="read">
-    <restriction suminagebnet="18" type="age"/>
+  <action type="read" permission="true">
+    <restriction type="age" suminagebnet="18" />
   </action>
 ```
 
@@ -104,8 +104,8 @@ In LibRML stehen folgende Einschränkungen zur Verfügung.
 ### Location
 
 ```xml
-  <action permission="true" type="download">
-    <restriction inside="library" type="location"/>
+  <action type="download" permission="true">
+    <restriction type="location" inside="library" />
   </action>
 ```
 
@@ -122,8 +122,8 @@ In LibRML stehen folgende Einschränkungen zur Verfügung.
 ### Date
 
 ```xml
-  <action permission="true" type="distribute">
-    <restriction fromdate="2035-01-01" type="date"/>
+  <action type="distribute" permission="true">
+    <restriction type="date" fromdate="2035-01-01" />
   </action>
 ```
 
@@ -140,8 +140,8 @@ In LibRML stehen folgende Einschränkungen zur Verfügung.
 ### Duration
 
 ```xml
-  <action permission="true" type="run">
-    <restriction duration="86400" type="duration"/>
+  <action type="run" permission="true">
+    <restriction type="duration" duration="86400" />
   </action>
 ```
 
@@ -158,8 +158,8 @@ In LibRML stehen folgende Einschränkungen zur Verfügung.
 ### Count
 
 ```xml
-  <action permission="true" type="print">
-    <restriction count="10" type="count"/>
+  <action type="print" permission="true">
+    <restriction type="count" count="10" />
   </action>
 ```
 
@@ -176,8 +176,8 @@ In LibRML stehen folgende Einschränkungen zur Verfügung.
 ### Concurrent
 
 ```xml
-  <action permission="true" type="lend">
-    <restriction sessions="4" type="concurrent"/>
+  <action type="lend" permission="true">
+    <restriction type="concurrent" sessions="4" />
   </action>
 ```
 
@@ -194,8 +194,8 @@ In LibRML stehen folgende Einschränkungen zur Verfügung.
 ### Watermark
 
 ```xml
-  <action permission="true" type="distribute">
-    <restriction type="watermark" watermarkvalue="https://domain/watermark.png"/>
+  <action type="distribute" permission="true">
+    <restriction type="watermark" watermarkvalue="https://domain/watermark.png" />
   </action>
 ```
 
@@ -212,8 +212,8 @@ In LibRML stehen folgende Einschränkungen zur Verfügung.
 ### Quality
 
 ```xml
-  <action permission="true" type="print">
-    <restriction maxresolution="300" type="quality"/>
+  <action type="print" permission="true">
+    <restriction type="quality" maxresolution="300" />
   </action>
 ```
 
@@ -230,8 +230,8 @@ In LibRML stehen folgende Einschränkungen zur Verfügung.
 ### Agreement
 
 ```xml
-  <action permission="true" type="read">
-    <restriction required="true" type="agreement"/>
+  <action type="read" permission="true">
+    <restriction type="agreement" required="true" />
   </action>
 ```
 

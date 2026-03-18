@@ -19,20 +19,20 @@ Zugang und Nutzung ist auf eine bestimmte Menge gleichzeitiger Zugriffe beschrä
 - concurrent (Gleichzeitig)
 
 ```xml
-<?xml encoding="ASCII" version="1.0"?>
+<?xml version="1.0" encoding="ASCII"?>
 <libRML version="0.4" xmlns="https://librml.org/schema">
   <item commercialuse="true" id="concuracc-440" template="ConcurrentAccess" tenant="https://www.slub-dresden.de/">
-    <action permission="true" type="displaymetadata"/>
-    <action permission="true" type="index"/>
-    <action permission="true" type="archive"/>
-    <action permission="true" type="read">
-      <restriction sessions="5" type="concurrent"/>
+    <action type="displaymetadata" permission="true"/>
+    <action type="index" permission="true"/>
+    <action type="archive" permission="true"/>
+    <action type="read" permission="true">
+      <restriction type="concurrent" sessions="5"/>
     </action>
-    <action permission="true" type="download">
-      <restriction sessions="5" type="concurrent"/>
+    <action type="download" permission="true">
+      <restriction type="concurrent" sessions="5"/>
     </action>
-    <action permission="true" type="print">
-      <restriction sessions="5" type="concurrent"/>
+    <action type="print" permission="true">
+      <restriction type="concurrent" sessions="5"/>
     </action>
   </item>
 </libRML>

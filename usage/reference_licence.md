@@ -48,7 +48,7 @@ In METS wird der URI der standardisierten Rechteinformation im Element `<mets:md
 ```xml
 <mets:amdSec>
   <mets:rightsMD ID="LibRML">
-    <mets:mdRef LABEL="CC BY 4.0" LOCTYPE="PURL" MDTYPE="OTHER" OTHERMDTYPE="Creative Commons" xlink:href="https://creativecommons.org/licenses/by/4.0/"/>
+    <mets:mdRef LABEL="CC BY 4.0" xlink:href="https://creativecommons.org/licenses/by/4.0/" LOCTYPE="PURL" MDTYPE="OTHER" OTHERMDTYPE="Creative Commons"/>
   </mets:rightsMD>
 </mets:amdSec>
 ```

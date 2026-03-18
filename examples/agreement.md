@@ -25,38 +25,38 @@ Zugang und Nutzung nur nach Einwilligung, zum Beispiel durch Abschluss eines Nut
 - agreement (Einwilligung)
 
 ```xml
-<?xml encoding="ASCII" version="1.0"?>
+<?xml version="1.0" encoding="ASCII"?>
 <libRML version="0.4" xmlns="https://librml.org/schema">
   <item commercialuse="true" id="agreement-DE-447" template="Agreement" tenant="https://www.slub-dresden.de/">
-    <action permission="true" type="displaymetadata"/>
-    <action permission="true" type="index"/>
-    <action permission="true" type="archive"/>
-    <action permission="true" type="read">
-      <restriction required="true" type="agreement"/>
+    <action type="displaymetadata" permission="true"/>
+    <action type="index" permission="true"/>
+    <action type="archive" permission="true"/>
+    <action type="read" permission="true">
+      <restriction type="agreement" required="true"/>
     </action>
-    <action permission="true" type="download">
-      <restriction required="true" type="agreement"/>
+    <action type="download" permission="true">
+      <restriction type="agreement" required="true"/>
     </action>
-    <action permission="true" type="print">
-      <restriction required="true" type="agreement"/>
+    <action type="print" permission="true">
+      <restriction type="agreement" required="true"/>
     </action>
-    <action permission="true" type="reproduce">
-      <restriction required="true" type="agreement"/>
+    <action type="reproduce" permission="true">
+      <restriction type="agreement" required="true"/>
     </action>
-    <action permission="true" type="modify">
-      <restriction required="true" type="agreement"/>
+    <action type="modify" permission="true">
+      <restriction type="agreement" required="true"/>
     </action>
-    <action permission="true" type="reuse">
-      <restriction required="true" type="agreement"/>
+    <action type="reuse" permission="true">
+      <restriction type="agreement" required="true"/>
     </action>
-    <action permission="true" type="distribute">
-      <restriction required="true" type="agreement"/>
+    <action type="distribute" permission="true">
+      <restriction type="agreement" required="true"/>
     </action>
-    <action permission="true" type="publish">
-      <restriction required="true" type="agreement"/>
+    <action type="publish" permission="true">
+      <restriction type="agreement" required="true"/>
     </action>
-    <action permission="true" type="move">
-      <restriction required="true" type="agreement"/>
+    <action type="move" permission="true">
+      <restriction type="agreement" required="true"/>
     </action>
   </item>
 </libRML>

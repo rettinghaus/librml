@@ -19,20 +19,20 @@ Zugang und Nutzung nur nach Authentifizierung. In LibRML wird dies durch Zugehö
 - group (Gruppe)
 
 ```xml
-<?xml encoding="ASCII" version="1.0"?>
+<?xml version="1.0" encoding="ASCII"?>
 <libRML version="0.4" xmlns="https://librml.org/schema">
   <item commercialuse="true" id="auth-DE-442" template="Authentification" tenant="https://www.slub-dresden.de/">
-    <action permission="true" type="displaymetadata"/>
-    <action permission="true" type="index"/>
-    <action permission="true" type="archive"/>
-    <action permission="true" type="read">
-      <restriction groups="registered" type="group"/>
+    <action type="displaymetadata" permission="true"/>
+    <action type="index" permission="true"/>
+    <action type="archive" permission="true"/>
+    <action type="read" permission="true">
+      <restriction type="group" groups="registered"/>
     </action>
-    <action permission="true" type="download">
-      <restriction groups="registered" type="group"/>
+    <action type="download" permission="true">
+      <restriction type="group" groups="registered"/>
     </action>
-    <action permission="true" type="print">
-      <restriction groups="registered" type="group"/>
+    <action type="print" permission="true">
+      <restriction type="group" groups="registered"/>
     </action>
   </item>
 </libRML>

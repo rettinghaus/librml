@@ -16,15 +16,15 @@ Ein urheberrechtsbehaftetes digitales Objekt der [SLUB Dresden](https://www.slub
 - Keine
 
 ```xml
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <libRML version="0.4" xmlns="https://librml.org/schema">
     <item commercialuse="false" copyright="true" id="DE-611-HS-3665348" tenant="https://www.slub-dresden.de/">
-        <action permission="true" type="displaymetadata"/>
-        <action permission="true" type="index"/>
-        <action permission="true" type="read"/>
-        <action permission="true" type="archive"/>
-        <action permission="true" type="distribute"/>
-        <action permission="true" type="move"/>
+        <action type="displaymetadata" permission="true"/>
+        <action type="index" permission="true"/>
+        <action type="read" permission="true"/>
+        <action type="archive" permission="true"/>
+        <action type="distribute" permission="true"/>
+        <action type="move" permission="true"/>
     </item>
 </libRML>
 ```

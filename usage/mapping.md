@@ -8,7 +8,7 @@
 <mods:mods>
     <mods:accessCondition type="use and reproduction" xlink:href="https://creativecommons.org/publicdomain/mark/1.0/">Public Domain Mark 1.0</mods:accessCondition>
     <mods:accessCondition type="local terms of use" xlink:href="https://nutzungshinweis.slub-dresden.de/ez-am-pr/1.0/">Eingeschränkter Zugang - Arbeitsplätze Mediathek - Persönlichkeitsrecht 1.0</mods:accessCondition>
-    <mods:accessCondition displayLabel="Access Status" type="restriction on access" xlink:href="http://purl.org/coar/access_right/c_16ec">Restricted Access</mods:accessCondition>
+    <mods:accessCondition type="restriction on access" xlink:href="http://purl.org/coar/access_right/c_16ec" displayLabel="Access Status">Restricted Access</mods:accessCondition>
 </mods:mods>
 ```
 
@@ -29,10 +29,10 @@ Ist die Prüfung positiv, werden die zugehörigen gültigen Beschränkungen im L
 ```xml
 <libRML:libRML xmlns:libRML="http://librml.org/schema">
     <libRML:item usageguide="https://nutzungshinweis.slub-dresden.de/ez-am-pr/1.0/">
-        <libRML:action permission="true" type="displaymetadata"/>
-        <libRML:action permission="true" type="index"/>
-        <libRML:action permission="true" type="read">
-            <libRML:restriction inside="Lesesaal(Sammlungen)" type="location"/>
+        <libRML:action type="displaymetadata" permission="true"/>
+        <libRML:action type="index" permission="true"/>
+        <libRML:action type="read" permission="true">
+            <libRML:restriction type="location" inside="Lesesaal(Sammlungen)"/>
         </libRML:action>
     </libRML:item>
 </libRML:libRML>
@@ -46,7 +46,7 @@ Ist die Prüfung positiv, werden die zugehörigen gültigen Beschränkungen im L
 <mods:mods>
     <mods:accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/InC/1.0/">Urheberrechtsschutz 1.0</mods:accessCondition>
     <mods:accessCondition type="local terms of use" xlink:href="https://nutzungshinweis.slub-dresden.de/ez-am/1.0/">Eingeschränkter Zugang - Arbeitsplätze Mediathek 1.0</mods:accessCondition>
-    <mods:accessCondition displayLabel="Access Status" type="restriction on access" xlink:href="http://purl.org/coar/access_right/c_16ec">Restricted Access</mods:accessCondition>
+    <mods:accessCondition type="restriction on access" xlink:href="http://purl.org/coar/access_right/c_16ec" displayLabel="Access Status">Restricted Access</mods:accessCondition>
 </mods:mods>
 ```
 
@@ -67,10 +67,10 @@ Ist die Prüfung positiv, werden die zugehörigen gültigen Beschränkungen im L
 ```xml
 <libRML:libRML xmlns:libRML="http://librml.org/schema">
     <libRML:item usageguide="https://nutzungshinweis.slub-dresden.de/ez-am/1.0/">
-        <libRML:action permission="true" type="displaymetadata"/>
-        <libRML:action permission="true" type="index"/>
-        <libRML:action permission="true" type="read">
-            <libRML:restriction inside="SLUB-Arbeitsplätze" type="location"/>
+        <libRML:action type="displaymetadata" permission="true"/>
+        <libRML:action type="index" permission="true"/>
+        <libRML:action type="read" permission="true">
+            <libRML:restriction type="location" inside="SLUB-Arbeitsplätze"/>
         </libRML:action>
     </libRML:item>
 </libRML:libRML>
@@ -83,7 +83,7 @@ Ist die Prüfung positiv, werden die zugehörigen gültigen Beschränkungen im L
 ```xml
 <mods:mods>
     <mods:accessCondition type="use and reproduction" xlink:href="http://creativecommons.org/publicdomain/mark/1.0/">Public Domain Mark 1.0</mods:accessCondition>
-    <mods:accessCondition displayLabel="Access Status" type="restriction on access" xlink:href="http://purl.org/coar/access_right/c_abf2">Open Access</mods:accessCondition>
+    <mods:accessCondition type="restriction on access" xlink:href="http://purl.org/coar/access_right/c_abf2" displayLabel="Access Status">Open Access</mods:accessCondition>
 </mods:mods>
 ```
 
@@ -102,11 +102,11 @@ Ist die Prüfung positiv, werden die zugehörigen gültigen Beschränkungen im L
 ```xml
 <libRML:libRML xmlns:libRML="http://librml.org/schema">
     <libRML:item usageguide="https://creativecommons.org/publicdomain/mark/1.0/">
-        <libRML:action permission="true" type="displaymetadata"/>
-        <libRML:action permission="true" type="download"/>
-        <libRML:action permission="true" type="index"/>
-        <libRML:action permission="true" type="publish"/>
-        <libRML:action permission="true" type="read"/>
+        <libRML:action type="displaymetadata" permission="true"/>
+        <libRML:action type="download" permission="true"/>
+        <libRML:action type="index" permission="true"/>
+        <libRML:action type="publish" permission="true"/>
+        <libRML:action type="read" permission="true"/>
     </libRML:item>
 </libRML:libRML>
 ```

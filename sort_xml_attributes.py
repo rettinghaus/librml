@@ -26,23 +26,15 @@ def sort_attributes(tag_match):
     for name, value, quote in attrs:
         sorted_attrs_str += f' {name}={quote}{value}{quote}'
 
-    # Optional: if original had a space before trailing / or ?, we might want to keep it.
-    # But for now, let's just ensure it's clean.
-    if trailing and not sorted_attrs_str.endswith(' '):
-        # Many XMLs have a space before />
-        # Let's see if we should add it.
-        # Looking at examples/concurrent.md: <restriction type="concurrent" sessions="5"/>
-        # No space before /> there.
-        pass
-
     return f'<{tag_name}{sorted_attrs_str}{trailing}>'
 
 def process_xml_block(xml_block):
-    # Tag regex: <TAG_NAME ATTRS /?> or <?xml ATTRS ?>
-    # Group 1: tag name (including optional leading ?)
+    # Tag regex for <item ...> or <libRML:item ...>
+    # We only want to target 'item' elements as requested.
+    # Group 1: tag name (must contain 'item')
     # Group 2: attributes string
     # Group 3: trailing / or ?
-    tag_pattern = re.compile(r'<(\??[a-zA-Z0-9:]+)([^>]*?)([/?]?)>')
+    tag_pattern = re.compile(r'<([a-zA-Z0-9:]*item)([^>]*?)([/?]?)>')
 
     def replace_tag(match):
         full_tag = match.group(0)

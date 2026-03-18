@@ -13,15 +13,15 @@ Hinweis:
 - Es wird keine Garantie für die juristische Korrektheit gegeben.
 
 ```xml
-<?xml encoding="ASCII" version="1.0"?>
+<?xml version="1.0" encoding="ASCII"?>
 <libRML version="0.4" xmlns="https://librml.org/schema">
     <item copyright="true" id="copyright-ra-100" template="LibRML Copyright - Restricted Access" tenant="https://www.slub-dresden.de/" usageguide="http://librml.org/examples/copyright_restrictedaccess">
-        <action permission="true" type="displaymetadata"/>
-        <action permission="true" type="index"/>
-        <action permission="true" type="read">
-          <restriction inside="library" type="location"/>
+        <action type="displaymetadata" permission="true"/>
+        <action type="index" permission="true"/>
+        <action type="read" permission="true">
+          <restriction type="location" inside="library"/>
         </action>
-        <action permission="true" type="archive"/>
+        <action type="archive" permission="true"/>
     </item>
 </libRML>
 ```

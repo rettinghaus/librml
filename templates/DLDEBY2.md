@@ -3,21 +3,21 @@
 ## Datenlizenz Deutschland – Namensnennung 2.0
 
 ```xml
-<?xml encoding="UTF-8" version="1.0"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <libRML version="0.4" xmlns="https://librml.org/schema">
   <item commercialuse="true" id="demo-mit-DL-DE-BY-2.0" mention="true" template="DL-DE-BY-2.0" usageguide="http://www.govdata.de/dl-de/by-2-0">
-    <action permission="true" type="displaymetadata"/>
-    <action permission="true" type="index"/>
-    <action permission="true" type="read"/>
-    <action permission="true" type="download"/>
-    <action permission="true" type="print"/>
-    <action permission="true" type="reproduce"/>
-    <action permission="true" type="modify"/>
-    <action permission="true" type="reuse"/>
-    <action permission="true" type="distribute"/>
-    <action permission="true" type="publish"/>
-    <action permission="true" type="archive"/>
-    <action permission="true" type="move"/>
+    <action type="displaymetadata" permission="true"/>
+    <action type="index" permission="true"/>
+    <action type="read" permission="true"/>
+    <action type="download" permission="true"/>
+    <action type="print" permission="true"/>
+    <action type="reproduce" permission="true"/>
+    <action type="modify" permission="true"/>
+    <action type="reuse" permission="true"/>
+    <action type="distribute" permission="true"/>
+    <action type="publish" permission="true"/>
+    <action type="archive" permission="true"/>
+    <action type="move" permission="true"/>
   </item>
 </libRML>
 ```
