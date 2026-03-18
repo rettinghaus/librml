@@ -21,32 +21,32 @@ Ab dem 1. Januar 2029 ist der Zugang dann uneingeschränkt möglich.
 - quality (Auflösung) mit date (zeitlich)
 
 ```xml
-<?xml version="1.0" encoding="ASCII"?>
+<?xml encoding="ASCII" version="1.0"?>
 <libRML version="0.4" xmlns="https://librml.org/schema">
-  <item id="embargo-28" tenant="https://www.slub-dresden.de/" commercialuse="false" template="IP">
-    <action type="displaymetadata" permission="true"/>
-    <action type="index" permission="true"/>
-    <action type="archive" permission="true"/>
-    <action type="read" permission="true">
-      <restriction type="quality" maxresolution="72"/>
-      <restriction type="date" todate="2028-12-31"/>
+  <item commercialuse="false" id="embargo-28" template="IP" tenant="https://www.slub-dresden.de/">
+    <action permission="true" type="displaymetadata"/>
+    <action permission="true" type="index"/>
+    <action permission="true" type="archive"/>
+    <action permission="true" type="read">
+      <restriction maxresolution="72" type="quality"/>
+      <restriction todate="2028-12-31" type="date"/>
     </action>
-    <action type="read" permission="true">
-      <restriction type="date" fromdate="2029-01-01"/>
+    <action permission="true" type="read">
+      <restriction fromdate="2029-01-01" type="date"/>
     </action>
-    <action type="download" permission="true">
-      <restriction type="quality" maxresolution="72"/>
-      <restriction type="date" todate="2028-12-31"/>
+    <action permission="true" type="download">
+      <restriction maxresolution="72" type="quality"/>
+      <restriction todate="2028-12-31" type="date"/>
     </action>
-    <action type="download" permission="true">
-      <restriction type="date" fromdate="2029-01-01"/>
+    <action permission="true" type="download">
+      <restriction fromdate="2029-01-01" type="date"/>
     </action>
-    <action type="print" permission="true">
-      <restriction type="quality" maxresolution="72"/>
-      <restriction type="date" todate="2028-12-31"/>
+    <action permission="true" type="print">
+      <restriction maxresolution="72" type="quality"/>
+      <restriction todate="2028-12-31" type="date"/>
     </action>
-    <action type="print" permission="true">
-      <restriction type="date" fromdate="2029-01-01"/>
+    <action permission="true" type="print">
+      <restriction fromdate="2029-01-01" type="date"/>
     </action>
   </item>
 </libRML>

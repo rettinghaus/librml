@@ -16,13 +16,13 @@ Umsetzung mit dem derzeit gültigen LibRML-Modell
             <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="LibRML">
                 <libRML:libRML xmlns:libRML="http://librml.org/schema">
                     <libRML:item usageguide="https://nutzungshinweis.slub-dresden.de/ez-am/1.0/">
-                        <libRML:action type="displaymetadata" permission="true"/>
-                        <libRML:action type="download" permission="false"/>
-                        <libRML:action type="index" permission="true"/>
-                        <libRML:action type="publish" permission="false"/>
-                        <libRML:action type="read" permission="true">
-                            <libRML:restriction type="concurrent" sessions="1"/>
-                            <libRML:restriction type="location" inside="SLUB-PC-Arbeitsplätze-Mediathek"/>
+                        <libRML:action permission="true" type="displaymetadata"/>
+                        <libRML:action permission="false" type="download"/>
+                        <libRML:action permission="true" type="index"/>
+                        <libRML:action permission="false" type="publish"/>
+                        <libRML:action permission="true" type="read">
+                            <libRML:restriction sessions="1" type="concurrent"/>
+                            <libRML:restriction inside="SLUB-PC-Arbeitsplätze-Mediathek" type="location"/>
                         </libRML:action>
                     </libRML:item>
                 </libRML:libRML>
@@ -44,14 +44,14 @@ Umsetzung mit einem angepassten LibRML-Modell
             <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="LibRML">
                 <libRML:libRML xmlns:libRML="http://librml.org/schema">
                     <libRML:item usageguide="https://nutzungshinweis.slub-dresden.de/ez-am/1.0/">
-                        <libRML:action type="displaymetadata" permission="true"/>
-                        <libRML:action type="download" permission="false"/>
-                        <libRML:action type="index" permission="true"/>
-                        <libRML:action type="publish" permission="false"/>
-                        <libRML:action type="read" permission="true">
-                            <libRML:restriction type="concurrent" sessions="1"/>
-                            <libRML:restriction type="location" inside="SLUB-PC-Arbeitsplätze-Mediathek"/>
-                            <libRML:restriction type="mets" filegroups="AUDIO DEFAULT VIDEO"/>
+                        <libRML:action permission="true" type="displaymetadata"/>
+                        <libRML:action permission="false" type="download"/>
+                        <libRML:action permission="true" type="index"/>
+                        <libRML:action permission="false" type="publish"/>
+                        <libRML:action permission="true" type="read">
+                            <libRML:restriction sessions="1" type="concurrent"/>
+                            <libRML:restriction inside="SLUB-PC-Arbeitsplätze-Mediathek" type="location"/>
+                            <libRML:restriction filegroups="AUDIO DEFAULT VIDEO" type="mets"/>
                         </libRML:action>
                     </libRML:item>
                 </libRML:libRML>

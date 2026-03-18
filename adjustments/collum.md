@@ -16,15 +16,15 @@ Umsetzung mit dem derzeit gültigen LibRML-Modell
             <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="LibRML">
                 <libRML:libRML xmlns:libRML="http://librml.org/schema">
                     <libRML:item usageguide="https://nutzungshinweis.slub-dresden.de/na-he-co/1.0/">
-                        <libRML:action type="displaymetadata" permission="true"/>
-                        <libRML:action type="download" permission="true">
-                            <libRML:restriction type="parts" parts="10"/>
+                        <libRML:action permission="true" type="displaymetadata"/>
+                        <libRML:action permission="true" type="download">
+                            <libRML:restriction parts="10" type="parts"/>
                         </libRML:action>
-                        <libRML:action type="index" permission="true"/>
-                        <libRML:action type="publish" permission="false"/>
-                        <libRML:action type="read" permission="true">
-                            <libRML:restriction type="concurrent" sessions="1"/>
-                            <libRML:restriction type="location" inside="SLUB-PC-Arbeitsplätze"/>
+                        <libRML:action permission="true" type="index"/>
+                        <libRML:action permission="false" type="publish"/>
+                        <libRML:action permission="true" type="read">
+                            <libRML:restriction sessions="1" type="concurrent"/>
+                            <libRML:restriction inside="SLUB-PC-Arbeitsplätze" type="location"/>
                         </libRML:action>
                     </libRML:item>
                 </libRML:libRML>
@@ -46,23 +46,23 @@ Umsetzung mit einem angepassten LibRML-Modell
             <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="LibRML">
                 <libRML:libRML xmlns:libRML="http://librml.org/schema">
                     <libRML:item usageguide="https://nutzungshinweis.slub-dresden.de/na-he-co/1.0/">
-                        <libRML:action type="displaymetadata" permission="true">
-                            <libRML:restriction type="mets" sections="amdSec dmdSec structMap"/>
+                        <libRML:action permission="true" type="displaymetadata">
+                            <libRML:restriction sections="amdSec dmdSec structMap" type="mets"/>
                         </libRML:action>
-                        <libRML:action type="download" permission="true">
-                            <libRML:restriction type="mets" filegroups="DEFAULT DOWNLOAD"/>
-                            <libRML:restriction type="parts" partspercentage="10"/>
+                        <libRML:action permission="true" type="download">
+                            <libRML:restriction filegroups="DEFAULT DOWNLOAD" type="mets"/>
+                            <libRML:restriction partspercentage="10" type="parts"/>
                         </libRML:action>
-                        <libRML:action type="index" permission="true">
-                            <libRML:restriction type="mets" sections="dmdSec"/>
+                        <libRML:action permission="true" type="index">
+                            <libRML:restriction sections="dmdSec" type="mets"/>
                         </libRML:action>
-                        <libRML:action type="publish" permission="true">
-                            <libRML:restriction type="interface" OAI-PMH="internal"/>
+                        <libRML:action permission="true" type="publish">
+                            <libRML:restriction OAI-PMH="internal" type="interface"/>
                         </libRML:action>
-                        <libRML:action type="read" permission="true">
-                            <libRML:restriction type="concurrent" sessions="1"/>
-                            <libRML:restriction type="location" inside="SLUB-PC-Arbeitsplätze"/>
-                            <libRML:restriction type="mets" filegroups="DEFAULT FULLTEXT THUMBS"/>
+                        <libRML:action permission="true" type="read">
+                            <libRML:restriction sessions="1" type="concurrent"/>
+                            <libRML:restriction inside="SLUB-PC-Arbeitsplätze" type="location"/>
+                            <libRML:restriction filegroups="DEFAULT FULLTEXT THUMBS" type="mets"/>
                         </libRML:action>
                     </libRML:item>
                 </libRML:libRML>

@@ -12,11 +12,11 @@ Zugang nur zu Metadaten. Nutzung (Ansicht, Download, ...) des digitalen Objekts 
 - Keine
 
 ```xml
-<?xml version="1.0" encoding="ASCII"?>
+<?xml encoding="ASCII" version="1.0"?>
 <libRML version="0.4" xmlns="https://librml.org/schema">
-  <item id="metaonly-441" tenant="https://www.slub-dresden.de/" template="Metadata access only">
-    <action type="displaymetadata" permission="true"/>
-    <action type="index" permission="true"/>
+  <item id="metaonly-441" template="Metadata access only" tenant="https://www.slub-dresden.de/">
+    <action permission="true" type="displaymetadata"/>
+    <action permission="true" type="index"/>
   </item>
 </libRML>
 ```

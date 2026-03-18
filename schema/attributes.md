@@ -6,7 +6,7 @@ Eigenschaften (`attributes`) spezifizieren die Einschränkungen (`constraints`) 
 Jeder Eigenschaft **muss** ein Wert zugewiesen werden. Einschränkungen können mehreren Eigenschaften zugewiesen werden.
 
 ```xml
-<restriction type="CONSTRAINT-NAME" ATTRIBUT-NAME="WERT"/>
+<restriction ATTRIBUT-NAME="WERT" type="CONSTRAINT-NAME"/>
 ```
 
 ```json

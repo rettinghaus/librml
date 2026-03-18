@@ -16,16 +16,16 @@ Umsetzung mit dem derzeit gültigen LibRML-Modell
             <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="LibRML">
                 <libRML:libRML xmlns:libRML="http://librml.org/schema">
                     <libRML:item usageguide="https://nutzungshinweis.slub-dresden.de/sc-zt/1.0/">
-                        <libRML:action type="displaymetadata" permission="true">
-                            <libRML:restriction type="group" groups="SLUB-Nutzende"/>
+                        <libRML:action permission="true" type="displaymetadata">
+                            <libRML:restriction groups="SLUB-Nutzende" type="group"/>
                         </libRML:action>
-                        <libRML:action type="download" permission="true">
-                            <libRML:restriction type="group" groups="SLUB-Nutzende"/>
+                        <libRML:action permission="true" type="download">
+                            <libRML:restriction groups="SLUB-Nutzende" type="group"/>
                         </libRML:action>
-                        <libRML:action type="index" permission="true"/>
-                        <libRML:action type="publish" permission="false"/>
-                        <libRML:action type="read" permission="true">
-                            <libRML:restriction type="group" groups="SLUB-Nutzende"/>
+                        <libRML:action permission="true" type="index"/>
+                        <libRML:action permission="false" type="publish"/>
+                        <libRML:action permission="true" type="read">
+                            <libRML:restriction groups="SLUB-Nutzende" type="group"/>
                         </libRML:action>
                     </libRML:item>
                 </libRML:libRML>
@@ -47,25 +47,25 @@ Umsetzung mit einem angepassten LibRML-Modell
             <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="LibRML">
                 <libRML:libRML xmlns:libRML="http://librml.org/schema">
                     <libRML:item usageguide="https://nutzungshinweis.slub-dresden.de/sc-zt/1.0/">
-                        <libRML:action type="displaymetadata" permission="true">
-                            <libRML:restriction type="group" groups="SLUB-Nutzende"/>
-                            <libRML:restriction type="mets" sections="amdSec dmdSec structMap"/>
+                        <libRML:action permission="true" type="displaymetadata">
+                            <libRML:restriction groups="SLUB-Nutzende" type="group"/>
+                            <libRML:restriction sections="amdSec dmdSec structMap" type="mets"/>
                         </libRML:action>
-                        <libRML:action type="download" permission="true">
-                            <libRML:restriction type="group" groups="SLUB-Nutzende"/>
-                            <libRML:restriction type="mets" filegroups="DOWNLOAD ORIGINAL"/>
-                            <libRML:restriction type="mets" fileformats="FULLDOWNLOAD-PDF FULLTEXT-TXT FULLTEXT-XML IIIF-JSON"/>
+                        <libRML:action permission="true" type="download">
+                            <libRML:restriction groups="SLUB-Nutzende" type="group"/>
+                            <libRML:restriction filegroups="DOWNLOAD ORIGINAL" type="mets"/>
+                            <libRML:restriction fileformats="FULLDOWNLOAD-PDF FULLTEXT-TXT FULLTEXT-XML IIIF-JSON" type="mets"/>
                         </libRML:action>
-                        <libRML:action type="index" permission="true">
-                            <libRML:restriction type="group" groups="SLUB-Nutzende"/>
-                            <libRML:restriction type="mets" filegroups="FULLTEXT"/>
+                        <libRML:action permission="true" type="index">
+                            <libRML:restriction groups="SLUB-Nutzende" type="group"/>
+                            <libRML:restriction filegroups="FULLTEXT" type="mets"/>
                         </libRML:action>
-                        <libRML:action type="publish" permission="true">
-                            <libRML:restriction type="interface" OAI-PMH="internal"/>
+                        <libRML:action permission="true" type="publish">
+                            <libRML:restriction OAI-PMH="internal" type="interface"/>
                         </libRML:action>
-                        <libRML:action type="read" permission="true">
-                            <libRML:restriction type="group" groups="SLUB-Nutzende"/>
-                            <libRML:restriction type="mets" filegroups="DEFAULT FULLTEXT THUMBS"/>
+                        <libRML:action permission="true" type="read">
+                            <libRML:restriction groups="SLUB-Nutzende" type="group"/>
+                            <libRML:restriction filegroups="DEFAULT FULLTEXT THUMBS" type="mets"/>
                         </libRML:action>
                     </libRML:item>
                 </libRML:libRML>

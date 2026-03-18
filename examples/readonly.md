@@ -14,13 +14,13 @@ Zugang zum Objekt zur Ansicht ohne weitere Nutzungsmöglichkeiten, wie Speichern
 - Keine
 
 ```xml
-<?xml version="1.0" encoding="ASCII"?>
+<?xml encoding="ASCII" version="1.0"?>
 <libRML version="0.4" xmlns="https://librml.org/schema">
-  <item id="readonly-449" tenant="https://www.slub-dresden.de/" template="Read only">
-    <action type="displaymetadata" permission="true"/>
-    <action type="index" permission="true"/>
-    <action type="read" permission="true"/>
-    <action type="archive" permission="true"/>
+  <item id="readonly-449" template="Read only" tenant="https://www.slub-dresden.de/">
+    <action permission="true" type="displaymetadata"/>
+    <action permission="true" type="index"/>
+    <action permission="true" type="read"/>
+    <action permission="true" type="archive"/>
   </item>
 </libRML>
 ```

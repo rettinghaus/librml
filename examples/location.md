@@ -19,20 +19,20 @@ Zugang und Nutzung nur innerhalb eines IP-Adressbereichs, wie zum Beispiel Campu
 - location (ortsspezifisch)
 
 ```xml
-<?xml version="1.0" encoding="ASCII"?>
+<?xml encoding="ASCII" version="1.0"?>
 <libRML version="0.4" xmlns="https://librml.org/schema">
-  <item id="iprestricted-444" tenant="https://www.slub-dresden.de/" commercialuse="false" template="IP">
-    <action type="displaymetadata" permission="true"/>
-    <action type="index" permission="true"/>
-    <action type="archive" permission="true"/>
-    <action type="read" permission="true">
-      <restriction type="location" subnet="192.168.10.0/24"/>
+  <item commercialuse="false" id="iprestricted-444" template="IP" tenant="https://www.slub-dresden.de/">
+    <action permission="true" type="displaymetadata"/>
+    <action permission="true" type="index"/>
+    <action permission="true" type="archive"/>
+    <action permission="true" type="read">
+      <restriction subnet="192.168.10.0/24" type="location"/>
     </action>
-    <action type="download" permission="true">
-      <restriction type="location" subnet="192.168.10.0/24"/>
+    <action permission="true" type="download">
+      <restriction subnet="192.168.10.0/24" type="location"/>
     </action>
-    <action type="print" permission="true">
-      <restriction type="location" subnet="192.168.10.0/24"/>
+    <action permission="true" type="print">
+      <restriction subnet="192.168.10.0/24" type="location"/>
     </action>
   </item>
 </libRML>

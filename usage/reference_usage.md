@@ -23,7 +23,7 @@ In METS wird der URI der standardisierten Rechteinformation im Element `<mets:md
 ```xml
 <mets:amdSec>
   <mets:rightsMD ID="LibRML">
-    <mets:mdRef LABEL="Zugang nur zu Metadaten" xlink:href="https://librml.org/examples/metadataonly.html" LOCTYPE="PURL" MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="LibRML"/>
+    <mets:mdRef LABEL="Zugang nur zu Metadaten" LOCTYPE="PURL" MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="LibRML" xlink:href="https://librml.org/examples/metadataonly.html"/>
   </mets:rightsMD>
 </mets:amdSec>
 ```

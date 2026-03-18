@@ -103,17 +103,17 @@ Die folgenden Beispiele nutzen das LibRML [Zugang nur innerhalb eines IP-Adressb
       <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="LibRML">
         <libRML:libRML version="0.4" xmlns:libRML="http://librml.org/schema">
           <libRML:item commercialuse="false">
-            <libRML:action type="displaymetadata" permission="true"/>
-            <libRML:action type="index" permission="true"/>
-            <libRML:action type="archive" permission="true"/>
-            <libRML:action type="read" permission="true">
-              <libRML:restriction type="location" inside="SLUB"/>
+            <libRML:action permission="true" type="displaymetadata"/>
+            <libRML:action permission="true" type="index"/>
+            <libRML:action permission="true" type="archive"/>
+            <libRML:action permission="true" type="read">
+              <libRML:restriction inside="SLUB" type="location"/>
             </libRML:action>
-            <libRML:action type="download" permission="true">
-              <libRML:restriction type="location" inside="SLUB"/>
+            <libRML:action permission="true" type="download">
+              <libRML:restriction inside="SLUB" type="location"/>
             </libRML:action>
-            <libRML:action type="print" permission="true">
-              <libRML:restriction type="location" inside="SLUB"/>
+            <libRML:action permission="true" type="print">
+              <libRML:restriction inside="SLUB" type="location"/>
             </libRML:action>
           </libRML:item>
         </libRML:libRML>
@@ -130,17 +130,17 @@ Die folgenden Beispiele nutzen das LibRML [Zugang nur innerhalb eines IP-Adressb
   <mods:accessCondition type="LibRML">
     <libRML:libRML version="0.4" xmlns:libRML="http://librml.org/schema">
       <libRML:item commercialuse="false">
-        <libRML:action type="displaymetadata" permission="true"/>
-        <libRML:action type="index" permission="true"/>
-        <libRML:action type="archive" permission="true"/>
-        <libRML:action type="read" permission="true">
-          <libRML:restriction type="location" inside="SLUB"/>
+        <libRML:action permission="true" type="displaymetadata"/>
+        <libRML:action permission="true" type="index"/>
+        <libRML:action permission="true" type="archive"/>
+        <libRML:action permission="true" type="read">
+          <libRML:restriction inside="SLUB" type="location"/>
         </libRML:action>
-        <libRML:action type="download" permission="true">
-          <libRML:restriction type="location" inside="SLUB"/>
+        <libRML:action permission="true" type="download">
+          <libRML:restriction inside="SLUB" type="location"/>
         </libRML:action>
-        <libRML:action type="print" permission="true">
-          <libRML:restriction type="location" inside="SLUB"/>
+        <libRML:action permission="true" type="print">
+          <libRML:restriction inside="SLUB" type="location"/>
         </libRML:action>
       </libRML:item>
     </libRML:libRML>

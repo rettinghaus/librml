@@ -10,7 +10,7 @@ Sie müssen in der LibRML-Beschreibung enthalten sein [(siehe LibRML Konzept)](c
 ```xml
 <libRML version="0.4" xmlns="http://librml.org/schema">
   <item id="ID-NAME">
-    <action type="ACTION-NAME" permission="true" />
+    <action permission="true" type="ACTION-NAME"/>
   </item>
 </libRML>
 ```
