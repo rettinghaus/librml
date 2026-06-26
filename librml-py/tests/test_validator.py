@@ -57,3 +57,14 @@ def test_validate_json_invalid(validator):
     }
     valid, error = validator.validate_json(invalid_json)
     assert not valid
+
+def test_validate_xml_version_mismatch(validator):
+    # The XSD version is 0.5.0
+    xml_content = b"""<?xml version="1.0" encoding="UTF-8"?>
+<libRML version="0.1.0" xmlns="http://librml.org/schema">
+  <item id="test-version"/>
+</libRML>
+"""
+    with pytest.warns(UserWarning, match="LibRML version mismatch"):
+        valid, error = validator.validate_xml(xml_content)
+        assert valid, error

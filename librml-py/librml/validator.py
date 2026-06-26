@@ -1,4 +1,5 @@
 import json
+import warnings
 from pathlib import Path
 from typing import Optional, Union
 
@@ -18,7 +19,10 @@ class LibRMLValidator:
             raise FileNotFoundError(f"JSON schema not found at {self.json_schema_path}")
 
         with open(self.xsd_path, "rb") as f:
-            self.xsd = etree.XMLSchema(etree.parse(f))
+            schema_doc = etree.parse(f)
+            self.xsd = etree.XMLSchema(schema_doc)
+            # Extract version from XSD root element attribute
+            self.xsd_version = schema_doc.getroot().get("version")
 
         with open(self.json_schema_path, "r") as f:
             self.json_schema = json.load(f)
@@ -31,6 +35,16 @@ class LibRMLValidator:
                 doc = etree.fromstring(xml_content.encode("utf-8"))
             else:
                 doc = etree.fromstring(xml_content)
+
+            # Check for version mismatch
+            root = doc.getroot() if hasattr(doc, "getroot") else doc
+            xml_version = root.get("version")
+            if xml_version and self.xsd_version and xml_version != self.xsd_version:
+                warnings.warn(
+                    f"LibRML version mismatch: XML version is {xml_version}, "
+                    f"but XSD version is {self.xsd_version}.",
+                    UserWarning,
+                )
 
             self.xsd.assertValid(doc)
             return True, None
