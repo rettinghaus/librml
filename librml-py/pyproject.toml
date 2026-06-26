@@ -18,6 +18,9 @@ dev = [
 [project.scripts]
 librml = "librml.cli:main"
 
+[tool.setuptools]
+packages = ["librml", "librml.schemas"]
+
 [tool.setuptools.package-data]
 "librml.schemas" = ["*.xsd", "*.json"]
 
