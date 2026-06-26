@@ -8,9 +8,14 @@ from jsonschema.exceptions import ValidationError as JSONValidationError
 
 class LibRMLValidator:
     def __init__(self):
-        self.schema_dir = Path(__file__).parent / "schemas"
+        self.schema_dir = Path(__file__).parent.resolve() / "schemas"
         self.xsd_path = self.schema_dir / "librml.xsd"
         self.json_schema_path = self.schema_dir / "librml.json"
+
+        if not self.xsd_path.exists():
+            raise FileNotFoundError(f"XSD schema not found at {self.xsd_path}")
+        if not self.json_schema_path.exists():
+            raise FileNotFoundError(f"JSON schema not found at {self.json_schema_path}")
 
         with open(self.xsd_path, "rb") as f:
             self.xsd = etree.XMLSchema(etree.parse(f))
