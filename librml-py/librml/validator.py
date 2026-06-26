@@ -1,0 +1,52 @@
+import json
+from pathlib import Path
+from typing import Optional, Union
+
+from lxml import etree
+from jsonschema import validate as validate_json_schema
+from jsonschema.exceptions import ValidationError as JSONValidationError
+
+class LibRMLValidator:
+    def __init__(self):
+        self.schema_dir = Path(__file__).parent / "schemas"
+        self.xsd_path = self.schema_dir / "librml.xsd"
+        self.json_schema_path = self.schema_dir / "librml.json"
+
+        with open(self.xsd_path, "rb") as f:
+            self.xsd = etree.XMLSchema(etree.parse(f))
+
+        with open(self.json_schema_path, "r") as f:
+            self.json_schema = json.load(f)
+
+    def validate_xml(self, xml_content: Union[str, bytes, Path]) -> tuple[bool, Optional[str]]:
+        try:
+            if isinstance(xml_content, Path):
+                doc = etree.parse(str(xml_content))
+            elif isinstance(xml_content, str):
+                doc = etree.fromstring(xml_content.encode("utf-8"))
+            else:
+                doc = etree.fromstring(xml_content)
+
+            self.xsd.assertValid(doc)
+            return True, None
+        except etree.DocumentInvalid as e:
+            return False, str(e)
+        except Exception as e:
+            return False, f"XML Parsing Error: {str(e)}"
+
+    def validate_json(self, json_data: Union[dict, str, Path]) -> tuple[bool, Optional[str]]:
+        try:
+            if isinstance(json_data, Path):
+                with open(json_data, "r") as f:
+                    data = json.load(f)
+            elif isinstance(json_data, str):
+                data = json.loads(json_data)
+            else:
+                data = json_data
+
+            validate_json_schema(instance=data, schema=self.json_schema)
+            return True, None
+        except JSONValidationError as e:
+            return False, e.message
+        except Exception as e:
+            return False, f"JSON Error: {str(e)}"

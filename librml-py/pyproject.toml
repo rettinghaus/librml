@@ -1,0 +1,30 @@
+[project]
+name = "librml"
+version = "0.1.0"
+description = "A Python validator and converter for LibRML"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "lxml",
+    "jsonschema",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[project.scripts]
+librml = "librml.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
